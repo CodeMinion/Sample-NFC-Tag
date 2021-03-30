@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NFC Sample</string>
+
+    <string name="btn_write_tag">Write to Found Tag</string>
+</resources>
