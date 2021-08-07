@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             mifare.connect()
 
             val builder:StringBuilder = StringBuilder()
-            for (i in 0.until(totalPages)) {
+            for (i in 0 until totalPages step MifareUltralight.PAGE_SIZE) {
                 val payload = mifare.readPages(4 + i)
                 val byteStr = String(payload, Charset.forName("US-ASCII"))
                 builder.append(byteStr)
